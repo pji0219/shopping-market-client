@@ -1,5 +1,17 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-export default function App() {
-  return <div>App</div>;
-}
+import Navbar from './common/components/Navbar';
+import GlobalStyle from './common/components/GlobalStyle';
+
+const App = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <Navbar />
+      <Outlet />
+    </>
+  );
+};
+
+export default App;
