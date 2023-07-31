@@ -10,12 +10,12 @@ const Navbar: React.FC = () => {
   const [show, setShow] = useState(false);
 
   const showHandler = () => {
-    setShow(true);
+    setShow(!show);
   };
 
   return (
     <>
-      <Modal show={show} />
+      <Modal show={show} click={showHandler} />
       <Header>
         <HomeLink to='/'>
           <Logo />

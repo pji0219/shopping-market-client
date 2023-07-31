@@ -4,13 +4,20 @@ import styled from 'styled-components';
 import { FiShoppingBag } from 'react-icons/fi';
 
 import Button from './Button';
+import Backdrop from './Backdrop';
 
 type Props = {
   show: boolean;
+  click: React.MouseEventHandler;
 };
 
-const Modal: React.FC<Props> = ({ show }) => {
-  return <>{show && <ModalOverlay />}</>;
+const Modal: React.FC<Props> = ({ show, click }) => {
+  return (
+    <>
+      {show && <Backdrop click={click} />}
+      {show && <ModalOverlay />}
+    </>
+  );
 };
 
 export default Modal;
