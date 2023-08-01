@@ -83,15 +83,17 @@ function ModalOverlay() {
             width={'400px'}
             height={'50px'}
           />
-          <Button
-            text={signinMode ? '회원가입으로' : '로그인으로'}
-            textSize={'18px'}
-            width={'400px'}
-            height={'50px'}
-            click={chageModeHadler}
-          />
         </div>
       </form>
+      <div className='change-mode'>
+        <Button
+          text={signinMode ? '회원가입으로' : '로그인으로'}
+          textSize={'18px'}
+          width={'400px'}
+          height={'50px'}
+          click={chageModeHadler}
+        />
+      </div>
     </ModalContainer>
   );
 
@@ -108,13 +110,13 @@ const ModalContainer = styled.div`
   z-index: 100;
   top: 10vh;
   left: 50vh;
-  background-color: beige;
+  background-color: #fff;
+  border-radius: 4px;
 
   & .modal-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid;
 
     & .logo {
       color: blueviolet;
@@ -131,10 +133,14 @@ const ModalContainer = styled.div`
     }
   }
 
+  & .change-mode {
+    display: flex;
+    justify-content: center;
+  }
+
   & form {
     margin-top: 16px;
     padding: 16px;
-    height: 80%;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -145,9 +151,7 @@ const ModalContainer = styled.div`
 
     & .button-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
+      justify-content: center;
       margin-top: 16px;
     }
   }
