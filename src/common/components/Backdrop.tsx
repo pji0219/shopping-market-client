@@ -21,6 +21,6 @@ const BackGround = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(117, 117, 117, 0.45);
   z-index: 10;
 `;

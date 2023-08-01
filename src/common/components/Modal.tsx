@@ -57,11 +57,6 @@ function ModalOverlay() {
           <h1>쇼핑마켓</h1>
         </div>
         <h2>{signinMode ? '로그인' : '회원가입'}</h2>
-        <p>
-          쇼핑을 즐겨 보세요!
-          <br />
-          하단의 회원가입 버튼을 이용해 가입하실 수 있습니다.
-        </p>
       </div>
       <form onSubmit={submitHandler}>
         <input
@@ -79,19 +74,26 @@ function ModalOverlay() {
         <div className='button-container'>
           <Button
             text={signinMode ? '로그인' : '회원가입'}
-            textSize={'18px'}
-            width={'400px'}
+            textsize={'18px'}
+            width={'300px'}
             height={'50px'}
+            color={'#fff'}
+            bgcolor={'blueviolet'}
           />
         </div>
       </form>
       <div className='change-mode'>
+        <p className='signup-text'>
+          {signinMode ? '계정이 없으신가요?' : '이미 가입하셨나요?'}
+        </p>
+        &nbsp;
         <Button
-          text={signinMode ? '회원가입으로' : '로그인으로'}
-          textSize={'18px'}
-          width={'400px'}
-          height={'50px'}
+          text={signinMode ? '회원가입' : '로그인'}
+          textsize={'17px'}
+          background={'none'}
           click={chageModeHadler}
+          color={'blueviolet'}
+          weight={'bold'}
         />
       </div>
     </ModalContainer>
@@ -104,7 +106,7 @@ function ModalOverlay() {
 }
 
 const ModalContainer = styled.div`
-  width: 500px;
+  width: 400px;
   height: 500px;
   position: fixed;
   z-index: 100;
@@ -124,10 +126,6 @@ const ModalContainer = styled.div`
       align-items: center;
     }
 
-    & p {
-      margin: 0;
-    }
-
     & h2 {
       margin-top: 8px;
     }
@@ -136,6 +134,12 @@ const ModalContainer = styled.div`
   & .change-mode {
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    & .signup-text {
+      font-size: 17px;
+      color: gray;
+    }
   }
 
   & form {
