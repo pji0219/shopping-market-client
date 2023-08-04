@@ -1,0 +1,74 @@
+{
+  "1": {
+    "category": "남성",
+    "description": "가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠",
+    "id": "1",
+    "image": "public/image/2.jpg",
+    "options": ["XS", "S", "M", "L", "XL"],
+    "price": 80000,
+    "title": "나일론 패널 & 스터드 디테일 코튼 스웻셔츠"
+  },
+  "2": {
+    "category": "여성",
+    "description": "더글러스 코플랜드의 프린트를 더한 후드 코튼 스웻셔츠",
+    "id": "2",
+    "image": "public/image/1.jpg",
+    "options": ["XXS", "XS", "S", "M", "L", "XL", "3XL"],
+    "price": 90000,
+    "title": "프린트 코튼 스웻셔츠 (여성)"
+  },
+  "3": {
+    "category": "남성",
+    "description": "가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠",
+    "id": "3",
+    "image": "public/image/2.jpg",
+    "options": ["XS", "S", "M", "L", "XL"],
+    "price": 80000,
+    "title": "나일론 패널 & 스터드 디테일 코튼 스웻셔츠"
+  },
+  "4": {
+    "category": "여성",
+    "description": "더글러스 코플랜드의 프린트를 더한 후드 코튼 스웻셔츠",
+    "id": "4",
+    "image": "public/image/1.jpg",
+    "options": ["XXS", "XS", "S", "M", "L", "XL", "3XL"],
+    "price": 90000,
+    "title": "프린트 코튼 스웻셔츠 (여성)"
+  },
+  "5": {
+    "category": "남성",
+    "description": "가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠",
+    "id": "5",
+    "image": "public/image/2.jpg",
+    "options": ["XS", "S", "M", "L", "XL"],
+    "price": 80000,
+    "title": "나일론 패널 & 스터드 디테일 코튼 스웻셔츠"
+  },
+  "6": {
+    "category": "여성",
+    "description": "더글러스 코플랜드의 프린트를 더한 후드 코튼 스웻셔츠",
+    "id": "6",
+    "image": "public/image/1.jpg",
+    "options": ["XXS", "XS", "S", "M", "L", "XL", "3XL"],
+    "price": 90000,
+    "title": "프린트 코튼 스웻셔츠 (여성)"
+  },
+  "7": {
+    "category": "남성",
+    "description": "가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠",
+    "id": "7",
+    "image": "public/image/2.jpg",
+    "options": ["XS", "S", "M", "L", "XL"],
+    "price": 80000,
+    "title": "나일론 패널 & 스터드 디테일 코튼 스웻셔츠"
+  },
+  "8": {
+    "category": "여성",
+    "description": "더글러스 코플랜드의 프린트를 더한 후드 코튼 스웻셔츠",
+    "id": "8",
+    "image": "public/image/1.jpg",
+    "options": ["XXS", "XS", "S", "M", "L", "XL", "3XL"],
+    "price": 90000,
+    "title": "프린트 코튼 스웻셔츠 (여성)"
+  }
+}
