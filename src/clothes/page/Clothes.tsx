@@ -1,38 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
-// type Products = {
-//   category: string;
-//   description: string;
-//   id: string;
-//   image: string;
-//   options: string;
-//   price: number;
-//   title: string;
-// };
+import { Product, ProductData } from '../../common/types/products';
+import Products from '../../common/components/Products';
+
+const data: Product[] = [
+  {
+    category: '남성',
+    description:
+      '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
+    id: '1',
+    image: 'image/2.jpg',
+    options: ['XS', 'S', 'M', 'L', 'XL'],
+    price: 80000,
+    title: '나일론 패널 & 스터드 디테일 코튼 스웻셔츠',
+  },
+];
 
 const Clothes: React.FC = () => {
-  const [products, setProducts] = useState<unknown[] | undefined>();
+  const [products, setProducts] = useState<ProductData>();
 
   useEffect(() => {
-    fetch('/data/products.json')
-      .then(res => res.json())
-      .then(data => {
-        const datas = Object.entries(data);
-        setProducts(datas);
-        console.log(products);
-      })
-      .catch(err => console.log(err));
+    setProducts(data);
   }, []);
 
-  const productList = products?.map((product: any, index) => {
-    return (
-      <li key={index}>
-        <img src={product.image} alt='image' />
-      </li>
-    );
-  });
-
-  return <div>{productList}</div>;
+  return <Products products={products} />;
 };
-
 export default Clothes;
