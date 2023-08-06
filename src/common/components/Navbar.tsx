@@ -44,7 +44,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
-  padding: 8px;
+  padding: 8px 24px;
 
   & nav {
     display: flex;

@@ -20,4 +20,9 @@ const ProductCard: React.FC<Props> = ({
 
 export default ProductCard;
 
-const Card = styled.li``;
+const Card = styled.li`
+  & img {
+    width: 100%;
+  }
+  cursor: pointer;
+`;

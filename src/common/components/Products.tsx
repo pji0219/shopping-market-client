@@ -16,4 +16,9 @@ const Products: React.FC<ProductItems> = ({ products }) => {
 
 export default Products;
 
-const ProductList = styled.ul``;
+const ProductList = styled.ul`
+  display: grid;
+  padding: 16px 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+`;
