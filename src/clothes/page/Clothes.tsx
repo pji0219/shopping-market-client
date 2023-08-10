@@ -135,4 +135,5 @@ const Clothes: React.FC = () => {
 
   return <Products products={products} />;
 };
+
 export default Clothes;
