@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FiShoppingBag } from 'react-icons/fi';
 
 import Button from './Button';
-import Modal from './Modal';
+import Modal from './Modal/Modal';
 
 const Navbar: React.FC = () => {
   const [show, setShow] = useState(false);

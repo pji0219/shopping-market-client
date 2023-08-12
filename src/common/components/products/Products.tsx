@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ProductItems } from '../types/products';
+import { ProductItems } from '../../types/products';
 import ProductCard from './ProductCard';
 
 const Products: React.FC<ProductItems> = ({ products }) => {

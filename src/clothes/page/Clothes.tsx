@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Product, ProductData } from '../../common/types/products';
-import Products from '../../common/components/Products';
+import Products from '../../common/components/products/Products';
 
 const data: Product[] = [
   {

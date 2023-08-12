@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import Products from '../../common/components/Products';
+import Products from '../../common/components/products/Products';
 import { ProductData, Product } from '../../common/types/products';
 
 const data: Product[] = [

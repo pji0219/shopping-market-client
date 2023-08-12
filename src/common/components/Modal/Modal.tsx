@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { FiShoppingBag } from 'react-icons/fi';
 
-import Button from './Button';
+import Button from '../Button';
 import Backdrop from './Backdrop';
 
 type Props = {
