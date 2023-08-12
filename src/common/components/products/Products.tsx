@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ProductItems } from '../../types/products';
+import { Product } from '../../types/products';
 import ProductCard from './ProductCard';
 
-const Products: React.FC<ProductItems> = ({ products }) => {
+type Props = {
+  products: Product[] | undefined;
+};
+
+const Products: React.FC<Props> = ({ products }) => {
   return (
     <ProductList>
       {products?.map(product => (

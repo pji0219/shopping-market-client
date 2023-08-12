@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Products from '../../common/components/products/Products';
-import { ProductData, Product } from '../../common/types/products';
+import { Product } from '../../common/types/products';
+import { AppDispatch, RootState } from '../../store';
+import { productsActions } from '../../store/slice/products';
 
 const data: Product[] = [
   {
@@ -127,10 +131,11 @@ const data: Product[] = [
 ];
 
 const Electronics: React.FC = () => {
-  const [products, setProducts] = useState<ProductData>();
+  const dispatch = useDispatch<AppDispatch>();
+  const products = useSelector((state: RootState) => state.products.products);
 
   useEffect(() => {
-    setProducts(data);
+    dispatch(productsActions.getProducts(data));
   }, []);
 
   return <Products products={products} />;

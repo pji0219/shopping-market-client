@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Product } from '../../types/products';
 
-import { Props } from '../../types/products';
+type Props = {
+  product: Product;
+};
 
 const ProductCard: React.FC<Props> = ({
   product: { category, image, price, title },

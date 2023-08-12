@@ -1,7 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { Product, ProductData } from '../../common/types/products';
+import { Product } from '../../common/types/products';
 import Products from '../../common/components/products/Products';
+import { AppDispatch } from '../../store';
+import { productsActions } from '../../store/slice/products';
+import { RootState } from '../../store';
 
 const data: Product[] = [
   {
@@ -127,10 +132,11 @@ const data: Product[] = [
 ];
 
 const Clothes: React.FC = () => {
-  const [products, setProducts] = useState<ProductData>();
+  const dispatch = useDispatch<AppDispatch>();
+  const products = useSelector((state: RootState) => state.products.products);
 
   useEffect(() => {
-    setProducts(data);
+    dispatch(productsActions.getProducts(data));
   }, []);
 
   return <Products products={products} />;

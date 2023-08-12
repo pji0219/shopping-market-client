@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import App from './App';
 import NotFound from './common/components/NotFound';
 import Home from './home/page/Home';
 import Electronics from './electronicProducts/page/Electronics';
 import Clothes from './clothes/page/Clothes';
+import store from './store';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 );
