@@ -9,6 +9,7 @@ import Home from './home/page/Home';
 import Electronics from './electronicProducts/page/Electronics';
 import Clothes from './clothes/page/Clothes';
 import store from './store';
+import SearchProducts from './search/page/SearchProducts';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { index: true, path: '/', element: <Home /> },
       { path: '/electronics', element: <Electronics /> },
       { path: '/clothes', element: <Clothes /> },
+      { path: '/search', element: <SearchProducts /> },
     ],
   },
 ]);

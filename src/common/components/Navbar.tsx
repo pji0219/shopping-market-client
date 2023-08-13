@@ -5,6 +5,7 @@ import { FiShoppingBag } from 'react-icons/fi';
 
 import Button from './Button';
 import Modal from './Modal/Modal';
+import Searchbar from '../../search/components/Searchbar';
 
 const Navbar: React.FC = () => {
   const [show, setShow] = useState(false);
@@ -24,6 +25,7 @@ const Navbar: React.FC = () => {
         <nav>
           <Link to='/clothes'>의류</Link>
           <Link to='/electronics'>전자제품</Link>
+          <Searchbar />
           <Button
             text={'로그인/회원가입'}
             textsize={'18px'}

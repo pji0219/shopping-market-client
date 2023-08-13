@@ -137,7 +137,7 @@ const Clothes: React.FC = () => {
 
   useEffect(() => {
     dispatch(productsActions.getProducts(data));
-  }, []);
+  }, [dispatch]);
 
   return <Products products={products} />;
 };

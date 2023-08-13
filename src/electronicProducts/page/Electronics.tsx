@@ -7,7 +7,7 @@ import { Product } from '../../common/types/products';
 import { AppDispatch, RootState } from '../../store';
 import { productsActions } from '../../store/slice/products';
 
-const data: Product[] = [
+export const data: Product[] = [
   {
     category: '남성',
     description:
@@ -16,7 +16,7 @@ const data: Product[] = [
     image: 'image/3.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
-    title: '나일론 패널 & 스터드 디테일 코튼 스웻셔츠',
+    title: '고라파덕',
   },
   {
     category: '남성',
@@ -26,7 +26,7 @@ const data: Product[] = [
     image: 'image/3.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
-    title: '나일론 패널 & 스터드 디테일 코튼 스웻셔츠',
+    title: '고라파덕',
   },
   {
     category: '남성',
@@ -36,7 +36,7 @@ const data: Product[] = [
     image: 'image/3.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
-    title: '나일론 패널 & 스터드 디테일 코튼 스웻셔츠',
+    title: '고라파덕',
   },
   {
     category: '남성',
@@ -46,7 +46,7 @@ const data: Product[] = [
     image: 'image/3.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
-    title: '나일론 패널 & 스터드 디테일 코튼 스웻셔츠',
+    title: '고라파덕',
   },
   {
     category: '남성',
@@ -136,7 +136,7 @@ const Electronics: React.FC = () => {
 
   useEffect(() => {
     dispatch(productsActions.getProducts(data));
-  }, []);
+  }, [dispatch]);
 
   return <Products products={products} />;
 };
