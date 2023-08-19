@@ -31,6 +31,7 @@ const Navbar: React.FC = () => {
             textsize={'18px'}
             color={'#fff'}
             background={'blueviolet'}
+            padding={'4px'}
             click={showHandler}
           />
         </nav>

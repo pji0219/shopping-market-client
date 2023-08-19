@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import styled from 'styled-components';
 
-// import { data } from '../../electronicProducts/page/Electronics';
-import { AppDispatch, RootState } from '../../store';
+import { AppDispatch } from '../../store';
 import { productsActions } from '../../store/slice/products';
 import { Product } from '../../common/types/products';
+import { data } from '../../electronicProducts/page/Electronics';
+import Button from '../../common/components/Button';
 
 const Searchbar: React.FC = () => {
-  const [searchText, setSearchText] = useState<string>('');
+  const [searchText, setSearchText] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch<AppDispatch>();
-  const products = useSelector((state: RootState) => state.products.products);
   const navigate = useNavigate();
 
-  const searchedProducts = products.filter((product: Product) => {
-    const query = searchParams.get('q') || '';
+  const searchedProducts = data.filter((product: Product) => {
+    const query = searchParams.get('product') || '';
     return product.title.toLowerCase().includes(query.toLowerCase());
   });
 
@@ -25,21 +26,43 @@ const Searchbar: React.FC = () => {
 
   const searchHandler = () => {
     navigate('/search');
-    setSearchParams({ q: searchText });
+    setSearchParams({ product: searchText });
     dispatch(productsActions.getProducts(searchedProducts));
   };
 
+  useEffect(() => {
+    dispatch(productsActions.getProducts(searchedProducts));
+  }, [dispatch, searchedProducts]);
+
   return (
-    <div>
-      <input
+    <Container>
+      <SearchBar
         type='text'
         value={searchText}
         onChange={inputChangeHandler}
         placeholder='검색어를 입력하세요.'
       />
-      <button onClick={searchHandler}>검색</button>
-    </div>
+      <Button
+        text={'검색'}
+        click={searchHandler}
+        bgcolor={'blueviolet'}
+        color={'#fff'}
+        textsize={'18px'}
+        margin={'0'}
+        padding={'4px'}
+      />
+    </Container>
   );
 };
 
 export default Searchbar;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const SearchBar = styled.input`
+  margin: 1px;
+  height: 25px;
+`;

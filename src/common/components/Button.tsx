@@ -11,6 +11,8 @@ type Props = {
   color?: string;
   background?: string;
   weight?: string;
+  padding?: string;
+  margin?: string;
 };
 
 const Button: React.FC<Props> = ({
@@ -23,6 +25,8 @@ const Button: React.FC<Props> = ({
   color,
   background,
   weight,
+  padding,
+  margin,
 }) => {
   return (
     <Btn
@@ -34,6 +38,8 @@ const Button: React.FC<Props> = ({
       color={color}
       background={background}
       weight={weight}
+      padding={padding}
+      margin={margin}
     >
       {text}
     </Btn>
@@ -50,12 +56,15 @@ type P = {
   color?: string;
   background?: string;
   weight?: string;
+  padding?: string;
+  margin?: string;
 };
 
 const Btn = styled.button<P>`
   background-color: ${({ bgcolor }) => bgcolor};
   color: ${({ color }) => color};
-  padding: 4px;
+  padding: ${({ padding }) => padding};
+  margin: ${({ margin }) => margin};
   border-radius: 4px;
   outline: none;
   border: none;

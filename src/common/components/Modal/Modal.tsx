@@ -94,6 +94,7 @@ function ModalOverlay() {
           click={chageModeHadler}
           color={'blueviolet'}
           weight={'bold'}
+          padding={'4px'}
         />
       </div>
     </ModalContainer>
