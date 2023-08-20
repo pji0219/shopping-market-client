@@ -10,6 +10,7 @@ import Electronics from './electronicProducts/page/Electronics';
 import Clothes from './clothes/page/Clothes';
 import store from './store';
 import SearchProducts from './search/page/SearchProducts';
+import ProductDetail from './productDetail/page/ProductDetail';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: '/electronics', element: <Electronics /> },
       { path: '/clothes', element: <Clothes /> },
       { path: '/search', element: <SearchProducts /> },
+      { path: '/product/:id', element: <ProductDetail /> },
     ],
   },
 ]);

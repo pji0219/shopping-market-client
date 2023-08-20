@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+
 import { Product } from '../../types/products';
 
 type Props = {
@@ -7,10 +9,19 @@ type Props = {
 };
 
 const ProductCard: React.FC<Props> = ({
-  product: { category, image, price, title },
+  product,
+  product: { id, category, image, price, title },
 }) => {
+  const navigate = useNavigate();
+
+  const goDetailHandler = () => {
+    navigate(`/product/${id}`, {
+      state: { product },
+    });
+  };
+
   return (
-    <Card>
+    <Card onClick={goDetailHandler}>
       <img src={image} alt={title} />
       <div>
         <h3>{title}</h3>
