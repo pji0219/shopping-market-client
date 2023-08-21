@@ -46,13 +46,13 @@ const Container = styled.div`
 
   & img {
     /* background-color: blue; */
-    flex-basis: 70%;
+    flex-basis: 60%;
   }
 
   & .product_info {
     display: flex;
     flex-direction: column;
-    /* background-color: blueviolet; */
-    flex-basis: 30%;
+    background-color: blueviolet;
+    flex-basis: 40%;
   }
 `;
