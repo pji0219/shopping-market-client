@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Product } from '../../common/types/products';
+import Button from '../../common/components/Button';
 
 type ProductDetailType = {
   product: Product;
@@ -12,7 +13,7 @@ const ProductDetail: React.FC = () => {
   const location = useLocation().state as ProductDetailType;
 
   const {
-    product: { id, image, title, description, category, price, options },
+    product: { image, title, description, category, price, options },
   } = location;
 
   const [selected, setSelected] = useState(options && options[0]);
@@ -24,14 +25,25 @@ const ProductDetail: React.FC = () => {
     <Container>
       <img src={image} alt={title} />
       <div className='product_info'>
-        {title}
-        {description}
-        {category}
-        {price}
-        {id}
-        {selected}
+        <h2 className='title'>{title}</h2>
+        <p className='price'>₩{price}</p>
+        <p className='category'>{category}</p>
+        <p className='description'>{description}</p>
+        <label htmlFor='select'>옵션</label>
+        <select id='select' onChange={optionsChangeHandler} value={selected}>
+          {options &&
+            options.map((option, index) => (
+              <option key={index}>{option}</option>
+            ))}
+        </select>
+        <Button
+          text={'장바구니에 담기'}
+          textsize={'18px'}
+          height={'40px'}
+          color={'#fff'}
+          background={'blueviolet'}
+        />
       </div>
-      <select name='' id='' onChange={optionsChangeHandler}></select>
     </Container>
   );
 };
@@ -39,20 +51,38 @@ const ProductDetail: React.FC = () => {
 export default ProductDetail;
 
 const Container = styled.div`
-  /* width: 100vw;
-  height: 100vh; */
   display: flex;
-  padding: 4px;
+  padding: 16px;
 
   & img {
-    /* background-color: blue; */
     flex-basis: 60%;
+    height: 500px;
   }
 
   & .product_info {
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
     flex-basis: 40%;
+    padding: 16px;
+  }
+
+  & .title {
+    margin-bottom: 8px;
+  }
+
+  & .price {
+    margin: 0;
+    padding-bottom: 8px;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+  }
+
+  & .category {
+    margin-bottom: 0;
+  }
+
+  & #select {
+    margin-bottom: 8px;
+    height: 40px;
   }
 `;
