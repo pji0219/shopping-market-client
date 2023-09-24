@@ -11,6 +11,7 @@ import Clothes from './clothes/page/Clothes';
 import store from './store';
 import SearchProducts from './search/page/SearchProducts';
 import ProductDetail from './productDetail/page/ProductDetail';
+import Cart from './cart/page/Cart';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: '/clothes', element: <Clothes /> },
       { path: '/search', element: <SearchProducts /> },
       { path: '/product/:id', element: <ProductDetail /> },
+      { path: '/cart', element: <Cart /> },
     ],
   },
 ]);

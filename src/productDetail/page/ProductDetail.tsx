@@ -1,25 +1,41 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
 
 import { Product } from '../../common/types/products';
 import Button from '../../common/components/Button';
+import { cartActions } from '../../store/slice/cart';
 
 type ProductDetailType = {
   product: Product;
 };
 
 const ProductDetail: React.FC = () => {
+  const dispatch = useDispatch();
   const location = useLocation().state as ProductDetailType;
 
   const {
-    product: { image, title, description, category, price, options },
+    product: { id, image, title, description, category, price, options },
   } = location;
 
   const [selected, setSelected] = useState(options && options[0]);
 
   const optionsChangeHandler = (event: React.ChangeEvent<HTMLSelectElement>) =>
     setSelected(event.target.value);
+
+  const addToCartHandler = () => {
+    const product = {
+      id,
+      image,
+      title,
+      price,
+      quantity: 1,
+      totalPrice: price,
+    };
+
+    dispatch(cartActions.addProductToCart(product));
+  };
 
   return (
     <Container>
@@ -42,6 +58,7 @@ const ProductDetail: React.FC = () => {
           height={'40px'}
           color={'#fff'}
           background={'blueviolet'}
+          click={addToCartHandler}
         />
       </div>
     </Container>
