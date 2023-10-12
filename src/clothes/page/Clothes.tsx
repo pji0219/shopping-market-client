@@ -13,7 +13,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '1',
+    id: '13',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -23,7 +23,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '2',
+    id: '14',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -33,7 +33,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '3',
+    id: '15',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -43,7 +43,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '4',
+    id: '16',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -53,7 +53,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '5',
+    id: '17',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -63,7 +63,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '6',
+    id: '18',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -73,7 +73,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '7',
+    id: '19',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -83,7 +83,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '8',
+    id: '20',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -93,7 +93,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '9',
+    id: '21',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -103,7 +103,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '10',
+    id: '22',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -113,7 +113,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '11',
+    id: '23',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,
@@ -123,7 +123,7 @@ const data: Product[] = [
     category: '남성',
     description:
       '가슴 부분에 나일론 패널 및 스터드 디테일을 구성한 후드 코튼 스웻셔츠',
-    id: '12',
+    id: '24',
     image: '/image/2.jpg',
     options: ['XS', 'S', 'M', 'L', 'XL'],
     price: 80000,

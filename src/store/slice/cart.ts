@@ -7,6 +7,7 @@ type CartProduct = {
   totalPrice: number;
   title: string;
   image: string;
+  options: string;
 };
 
 type State = {
@@ -37,9 +38,19 @@ const cartSlice = createSlice({
           existingProduct.totalPrice + newProduct.price;
       }
     },
+    minusProductFromCart(state: State, action: PayloadAction<string>) {
+      const id = action.payload;
+      const existingProduct = state.products.find(product => product.id === id);
+
+      if (existingProduct) {
+        existingProduct.quantity--;
+        existingProduct.totalPrice =
+          existingProduct.totalPrice - existingProduct.price;
+      }
+    },
     removeFromCart(state: State, action: PayloadAction<string>) {
       const id = action.payload;
-      state.products.filter(product => product.id !== id);
+      state.products = state.products.filter(product => product.id !== id);
     },
   },
 });

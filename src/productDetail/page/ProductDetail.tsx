@@ -32,6 +32,7 @@ const ProductDetail: React.FC = () => {
       price,
       quantity: 1,
       totalPrice: price,
+      options: selected,
     };
 
     dispatch(cartActions.addProductToCart(product));

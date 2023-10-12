@@ -25,6 +25,7 @@ const Navbar: React.FC = () => {
         <nav>
           <Link to='/clothes'>의류</Link>
           <Link to='/electronics'>전자제품</Link>
+          <Link to='/cart'>카트</Link>
           <Searchbar />
           <Button
             text={'로그인/회원가입'}
